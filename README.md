@@ -177,3 +177,17 @@ models = require('loopback-orm')({
 });
 ```
 
+## Mixins
+
+If your model schemas use mixins, then you can pass in a `mixins` option to the call.  "TimeStamp" is a popular
+mixin for adding createdAt and updatedAt properties to model instances on creaton and update.  Here is an example
+that supports the TimeStamp mixin (you must npm install loopback-ds-timestamp-mixin for this):
+
+```js
+models = require('loopback-orm')({
+  mixins: {
+    TimeStamp: require("./node_modules/loopback-ds-timestamp-mixin/time-stamp")
+  },
+  ...
+});
+```
