@@ -65,6 +65,7 @@ module.exports = function({connector, schemas, modelsPath, relations, mixins, sy
           options: {
             ...s.options,
             mixins: s.mixins,
+            indexes: s.indexes
           }
         }
       });
